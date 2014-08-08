@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Camejo Fútbol</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+	<script src="library.js"></script>
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+</head>
+<body>
+	<div id="container">
+		<div class="jumbotron"> 
+			<h1>Puntos de Fútbol</h1>
+		</div>
+
+		<h3>Añadir equipo:</h3>
+
+		Nombre del equipo: <input class="form-control" id="team-name" type="text" name="equipo"><br>
+		Puntos: <input class="form-control" type="text" id="points" name="puntos" onkeypress="return isNumberKey(event)"><br>
+		<input id="añadir" class="btn btn-primary" type="submit" value="Añadir">
+
+		<h3>Seleccionar equipo:</h3>
+
+		<select class="form-control" name="equipoddl" id="team-select">
+			<option>- Seleccionar equipo -</option>
+		</select><br>
+
+		Puntos  <span id="points-readonly" class="form-control"></span><br>
+
+		Aumentar puntos por: <input id="point-increment" class="form-control" type="text" name="puntos" onkeypress="return isNumberKey(event)"><br>
+
+		<input id="update" class="btn btn-primary" type="submit" value="Aumentar">
+		<br><br>
+		<input id="reset" class="btn btn-warning" type="submit" value="Reset">
+
+		<footer class="jumbotron">
+			Made with MongoDB, node.js, express, mongoskin, jQuery, toastr, Bootstrap & HTML5
+		</footer>
+	</div>
+</body>
+</html>
+
+
