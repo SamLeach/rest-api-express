@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Resultados</title>
+	<title>Eliminar</title>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -36,27 +36,27 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
-		        <li class="active"><a href="index.html">Resultados</a></li>
+		        <li><a href="index.html">Resultados</a></li>
 		        <li><a href="añadir.html">Añadir</a></li>
 		        <li><a href="editar.html">Editar</a></li>
-		        <li><a href="eliminar.html">Eliminar</a></li>
+		        <li class="active"><a href="eliminar.html">Editar</a></li>
 		      </ul>
 
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
 
-		<h3>Resultados:</h3>
-			<table id='totals' style="margin-top:30px" class="tablesorter table table-striped">
-				<thead> 
-					<tr>
-				  <th><strong>Equipo</strong></th>
-				  <th><strong>Puntos</strong></th> 
-				</tr>
-			</thead>
-			<tbody></tbody>  
-			</table><br>
-		<input id="reset" class="btn btn-warning" type="submit" value="Reset"><br><br>
+		<h3>Eliminar equipo:</h3>
+
+		<div class="alert alert-danger" role="alert">Aviso: Esta acción es irreversible!</div>
+
+		<select class="form-control" name="equipoddl" id="team-select">
+			<option value="">- Seleccionar equipo -</option>
+		</select><br>
+
+		<input id="delete" class="btn btn-primary" type="submit" value="Eliminar">
+		<a href="index.html" class="btn btn-warning" >Cancelar</a>
+		<br><br>
 
 		<footer class="jumbotron">
 			Made with MongoDB, node.js, express, mongoskin, jQuery, toastr, Bootstrap & HTML5

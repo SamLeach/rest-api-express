@@ -9,6 +9,8 @@ app.use(bodyParser.urlencoded())
 var ip_addr = process.env.OPENSHIFT_NODEJS_IP   || '127.0.0.1';
 var port    = process.env.OPENSHIFT_NODEJS_PORT || '8080';
 
+// comment gg
+
 var db = mongoskin.db(process.env.OPENSHIFT_MONGODB_DB_URL + 'camejo', {safe:true})
 
 app.param('collectionName', function(req, res, next, collectionName){
